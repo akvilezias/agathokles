@@ -12,13 +12,12 @@ RewriteRule . /index.php [L]
 RewriteEngine On
 RewriteBase /
 
-# Redirect encoded URL to hyphenated URL
-RewriteCond %{ENV:REDIRECT_STATUS} ^$
-RewriteCond %{QUERY_STRING} !.+
-RewriteCond %{REQUEST_URI} (.*)\/([^\/\s%]*)\%20([^\/\s%]*)\.html
-RewriteCond %{REQUEST_FILENAME} !-f
+# Redirect from .html to non-.html URLs
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule .* /%1/%2-%3 [R=301,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
 
-# Rewrite hyphenated URL to actual URL
-RewriteRule ^([^/]+)-([^/]+)$ $1\%20$2.html [L]
+# Rewrite to add .html internally
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*[^/])$ /$1.html [L]
