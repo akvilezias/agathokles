@@ -12,12 +12,11 @@ RewriteRule . /index.php [L]
 RewriteEngine On
 RewriteBase /
 
-# Redirect from .html to non-.html URLs
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)\.html$ /$1 [R=301,L]
-
-# Rewrite to add .html internally
+# Remove .html extension from URLs
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*[^/])$ /$1.html [L]
+RewriteRule ^(.*)$ $1.html [L]
+
+# Redirect requests for .html URLs to non-.html URLs
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.html\ HTTP/
+RewriteRule ^(.+)\.html$ /$1 [R=301,L]
