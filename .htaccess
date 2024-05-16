@@ -1,8 +1,8 @@
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^domain.tld$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.domain.tld$
+RewriteCond %{HTTP_HOST} ^www.chrysos.cc$
 RewriteCond %{REQUEST_URI} !subdirectory/
-RewriteRule (.*) /subdirectory/$1 [L]
+RewriteRule (.*) //home/u788451084/domains/chrysos.cc/public_html/$1 [L]
 
 # Rewriting URLs
 RewriteCond %{REQUEST_FILENAME} !-f
