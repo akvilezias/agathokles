@@ -12,11 +12,11 @@ RewriteRule . /index.php [L]
 RewriteEngine On
 RewriteBase /
 
-# Redirect encoded URL to hyphenated URL
-RewriteCond %{THE_REQUEST} /([^%]*)\%20([^\s]*)\.html [NC]
-RewriteRule ^ /%1-%2 [R=301,L]
+# Redirect /Notes%20on%20the%20German%20symphony%20(ongoing).html to /Notes-on-the-German-symphony-(ongoing)
+RewriteCond %{REQUEST_URI} ^/(.*?)(%20)(.*)(\.html)$ [NC]
+RewriteRule ^ %1-%3 [R=301,L]
 
-# Rewrite hyphenated URL to actual URL
+# Redirect /Notes-on-the-German-symphony-(ongoing) back to /Notes%20on%20the%20German%20symphony%20(ongoing).html
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^([^/]+)-([^/]+)$ $1\%20$2.html [L]
+RewriteRule ^([^/]+)-([^/]+)$ $1\%20$2.html [NC,L]
