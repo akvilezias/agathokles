@@ -1,0 +1,10 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^domain.tld$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.domain.tld$
+RewriteCond %{REQUEST_URI} !subdirectory/
+RewriteRule (.*) /subdirectory/$1 [L]
+
+# Rewriting URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)-(.*)$ $1\ $2.html [NC,L]
