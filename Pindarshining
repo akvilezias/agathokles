@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Shining in Pindar</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Baskerville' rel='stylesheet'>
+
+    <style>
+        body {
+            font-family: 'Baskerville';
+            font-size: 16px;
+            text-align: justify;
+            margin: auto;
+            max-width: 700px;
+        }
+    </style>
+
+    <link rel="icon" href="Sun.png">
+    
+</head>
+
+<body>
+    <p style="font-size: 26px; margin-top: 100px">Shining in Pindar</p>
+
+    <p>All things shine in Pindar. When the lyre is combined with dance, resplendent joy in festiveness (ἀγλαΐα) is achieved. The semantic group of words surrounding αἴγλη or ἀγλαός connotes a brightness that is manifest. Ἀγλαΐα should be construed not just as an emotion, that is, internally (e.g., joy), but visually: it is sensory, emphatically external. The pedigree of the word’s import is from Homer Od. 6.41-2.</p>
+    
+    <p></p>
+    
+    <p style="margin-left:50px; margin-right:50px;">πέπταται ἀννέφελος, λευκὴ δ᾽ ἐπιδέδρομεν αἴγλη</p>
+    <p style="margin-left:50px; margin-right:50px;">τῷ ἔνι τέρπονται μάκαρες θεοὶ ἤματα πάντα.</p>
+    
+    <p></p>
+    
+    <p>A good illustration of this meaning is the description of fire in Olympian 1. There, ‘burning fire’ stands out, is eminent, is conspicuous (διαπρέπει) in the night. Later in the ode, the implication is that just as fire gleams proclaiming itself in the night, so Pindar’s song (πολύφατος ὕμνος, 8) will exclaim and exalt its subjects. The intended result of Pindar’s song might be summed up by another phrase using this language. In Olympian 1 Pindar’s goal is for his subject’s ‘fame to shine’ (λάμπει δέ οἱ κλέος, 23). Just as in Pythian 1 the lyre has a part in this exaltation, so in Olympian 1 the lyre is not far from this shining. Pindar tells in Olympian 1 of how those in the court of Hieron ‘exalt him in the highest song’ (ἀγλαΐζεται δὲ καὶ μουσικᾶς ἐν ἀώτῳ, 14-16).</p>
+</body>
+</html>
